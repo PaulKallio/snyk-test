@@ -1,0 +1,12 @@
+{
+  "env": {
+    "jest": true
+  },
+  "globals": {
+    "expect": true
+  },
+  "rules": {
+    "quote-props": 0,
+    "no-unused-expressions": 0
+  }
+}

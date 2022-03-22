@@ -1,0 +1,23 @@
+.header-section {
+  background-color: $hel-silver;
+}
+
+.hearing-header {
+  .hearing-meta {
+    border-top: 1px solid $gray-light;
+  }
+
+  .main-labels {
+    border-top: 1px solid $gray-light;
+  }
+}
+
+.hearing-project {
+  .active-phase {
+    background: $hel-fog;
+  }
+}
+
+.sortable-comment-list {
+  background-color: $theme-secondary-light;
+}

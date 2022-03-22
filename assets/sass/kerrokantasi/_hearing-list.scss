@@ -1,0 +1,251 @@
+.hearing-list-item {
+  display: flex;
+  position: relative;
+  margin-bottom: $line-height-computed * 2;
+  width: 100%;
+  box-shadow: $default-shadow;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 1.4rem;
+    margin-bottom: $line-height-computed;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &-image {
+    flex-basis: 200px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: $screen-xs-max) {
+        display: none;
+    }
+  }
+
+  &-content {
+    flex: 1 auto;
+    padding: $line-height-computed;
+    overflow: hidden;
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 73%;
+    }
+  }
+
+  &-labellist {
+    float: left;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .label {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  &-closed {
+    text-align: right;
+  }
+
+  &-title-wrap {
+    padding-right: 70px;
+    position: relative;
+  }
+
+  &-title {
+    margin-top: 0;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &-comments {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &-times {
+    color: $text-muted;
+    font-size: $font-size-small;
+    margin-bottom: $line-height-computed/1.5;
+  }
+}
+
+.page-section--all-hearings-header {
+  background-color: $gray-200;
+}
+
+.hearing-comment__images {
+  display: flex;
+
+  &-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+.hearing-list-hidden {
+  display: none;
+}
+
+.hearing-list__tabs {
+  margin-top: 40px;
+  border-bottom: 0;
+  float: right;
+
+  > li {
+    margin-bottom: -2px;
+
+    > a {
+      border: 2px solid transparent;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background: transparent;
+      }
+    }
+  }
+
+  > li.active > a,
+  > li.active > a:hover,
+  > li.active > a:focus {
+    border: 2px solid $gray-400;
+    border-bottom-color: transparent;
+  }
+
+  &-empty {
+    width: 70%;
+
+    @media (max-width: $screen-xs-max) {
+      width: 60%;
+    }
+
+    @media (max-width: $screen-xs-min) {
+      width: 45%;
+    }
+  }
+}
+
+.hearing-list-map {
+  margin-top: 20px !important;
+}
+
+.hearing-list {
+  &__result-controls {
+    margin-bottom: $grid-gutter-width;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__hearing-list-title {
+    flex: 0 1 auto;
+    font-size: $font-size-large;
+    font-weight: 400;
+    margin: 0 $grid-gutter-width*1.5 $grid-gutter-width/2 0;
+    color: $text-muted;
+
+    span {
+      margin-left: 0.15em;
+    }
+  }
+
+  &__filter-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin-bottom: $grid-gutter-width/2;
+
+    &-filter {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin: 0;
+    }
+
+    &-label {
+      margin: 0;
+      margin-right: $grid-gutter-width/2;
+    }
+
+    .select {
+      @media (min-width: $screen-sm-min) {
+        min-width: 250px;
+      }
+    }
+  }
+}
+
+.page-section--hearings-search {
+  background-color: $gray-200;
+}
+
+.page-section--hearings-tabs {
+  background-color: $gray-200;
+  border-bottom: 2px solid $gray-400;
+}
+
+.hearings-search {
+  &__container {
+    padding-bottom: 10px;
+    height: 80px;
+
+    .Select-placeholder {
+      color: $text-muted;
+    }
+  }
+
+  &__label {
+    width: 48%;
+    float: right;
+  }
+
+  &__text {
+    width: 48%;
+    display: inline-block;
+  }
+
+  &__button {
+    float: left;
+  }
+}
+
+.hearing-labels {
+  border: 1px solid #000;
+  border-top: none;
+  position: absolute;
+  background: #fff;
+  max-height: 300px;
+  z-index: 100;
+  overflow: auto;
+  margin-right: 30px;
+
+  &__label {
+    padding: 10px;
+
+    &:hover {
+      background: #005eb8;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.admin-filter-selector {
+  > li > a {
+    border: solid 2px $black;
+    span.fa {
+      padding-right: 5px;
+    }
+  }
+}
