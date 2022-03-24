@@ -32,5 +32,17 @@ resources:
     # project/repository
     name: kerrokantasi/kerrokantasi-pipelines
 
+#--------------------------- Build and Test -----------------------------------
+# static code analysis, Snyk.io SAST
+stages:
+- stage: TestSnyk
+  displayName: SAST Testing Snyk
+  # variables: $SNYK_TOKEN
+  jobs:
+  - job: Test
+    steps:
+    - echo "Snyk test"
+    - script snyk test
+
 extends:
   template: azure-pipelines-kerrokantasi-ui-devtest.yml@kerrokantasi-pipelines
